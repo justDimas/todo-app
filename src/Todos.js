@@ -14,8 +14,10 @@ let todos = [
 	},{
 		id: 4,
 		title: 'Find job',
-		finished: true
+		finished: false
 	}
 ]
 
-export const fetchTodos = () => todos
+let fetchTodos = () => todos
+
+export default fetchTodos 
