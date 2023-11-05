@@ -1,0 +1,32 @@
+.todo__form{
+	margin-top: 20px;
+}
+
+.form__label{
+	display: block;
+}
+
+.form__input{
+	outline: 0;
+	border: 0;
+	padding: 5px 10px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px
+}
+
+.form__submit{
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	padding: 5px 10px;
+	background-color: lightgrey;
+	font-weight: 600;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+	color: green;
+	margin-top: 10px;
+}
+
+.form__submit:hover{
+	background-color: whitesmoke;
+}

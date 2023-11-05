@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../Styles/List.css';
 
 import Filter from "./Filter";
 import Item from "./Item"
@@ -24,9 +25,9 @@ const List = ({setTodos, todos}) => {
 	}
 
 	return (
-		<main>
-			<Filter setFilter={setFilter}/>
-			<ul>
+		<main className="todo__body body">
+			<Filter setFilter={setFilter} filter={filter}/>
+			<ul className="body__list list">
 				{todoComponents}
 			</ul>
 		</main>

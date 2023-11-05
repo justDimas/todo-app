@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import '../Styles/App.css'
 
 import Header from "./Header";
 import List from "./List";
@@ -14,10 +15,12 @@ const App = () => {
 	},[])
 
 	return (
-    <div className="App">
-		<Header todos={todos}/>
-		<List setTodos={setTodos} todos={todos}/>
-		<AddForm setTodos={setTodos}/>
+    <div className="App todo">
+		<div className="container">
+			<Header todos={todos}/>
+			<List setTodos={setTodos} todos={todos}/>
+			<AddForm setTodos={setTodos}/>
+		</div>
 	 </div>
   );
 }

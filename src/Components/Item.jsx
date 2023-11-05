@@ -1,8 +1,11 @@
-const Item = ({id, title, setTodos}) => {
+import '../Styles/Item.css'
+
+const Item = ({id, title, setTodos, finished}) => {
+	const classMod = finished ? ' item__title_finished' : '' 
 	return (
-		<li>
-			<div>{title}</div>
-			<button type="button" onClick={()=>{
+		<li className='list__item item'>
+			<p className={'item__title' + classMod}>{title}</p>
+			<button className='item__check-btn item-control' type="button" onClick={()=>{
 				setTodos( todos => 
 					todos.map(todo=> {
 						if (todo.id === id)
@@ -11,7 +14,7 @@ const Item = ({id, title, setTodos}) => {
 					})
 				)
 			}}>y</button>	
-			<button type="button" onClick={()=>{
+			<button className='item__remove-btn item-control' type="button" onClick={()=>{
 				setTodos(todos=>
 					todos.reduce((prev, current)=>{
 						if(current.id!==id) 

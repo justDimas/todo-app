@@ -1,0 +1,8 @@
+.body__list{
+	margin-top: 20px;
+}
+
+.list{
+	height: 190px;
+	overflow: auto;
+}

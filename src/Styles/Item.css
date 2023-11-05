@@ -1,0 +1,46 @@
+.item{
+	display:  flex;
+	gap: 5px;
+	background-color: white;
+	padding: 10px 20px;
+	border: 1px solid lightgray;
+	animation: appears 500ms;
+}
+
+@keyframes appears {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.item__title{
+	flex-grow: 1;
+	overflow-wrap: break-word;
+	max-width: 200px;
+}
+
+.item__title_finished{
+	color: orange;
+	text-decoration: line-through;
+}
+
+.item__check-btn{
+	color: orange;
+}
+.item__remove-btn{
+	color: red;
+}
+
+.item-control{
+	padding: 5px 10px;
+	outline: 0;
+	border: 0;
+	cursor: pointer;
+	background-color: lightgray;
+	font-weight:600;
+	border-radius: 2px;
+	height: fit-content;
+	align-self: center;
+}
+.item-control:hover{
+	background-color: whitesmoke;
+}

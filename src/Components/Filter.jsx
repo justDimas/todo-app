@@ -1,14 +1,17 @@
-const Filter = ({setFilter}) => {
-	const filters = [
+import '../Styles/Filter.css'
+
+const Filter = ({setFilter, filter}) => {
+	const classMod = ' filter__button_selected'
+	const btnData = [
 		{id:'0', value:'Все задачи'},
-		{id:'1', value:'Выполненные задачи'},
-		{id:'2', value:'Невыполненные задачи'}
+		{id:'1', value:'Выполненные'},
+		{id:'2', value:'Текущие'}
 	]
-	const buttons = filters.map(filter => <button key={filter.id} data-value={filter.id}>{filter.value}</button>)
+	const buttons = btnData.map(data => <li className="filter__item"><button className={(data.id === filter) ? 'filter__button ' +  classMod : 'filter__button'} key={data.id} data-value={data.id}>{data.value}</button></li>)
 	return (
-		<div onClick={(e) => setFilter(e.target.dataset.value)}>
+		<ul className="body__filter filter" onClick={(e) => setFilter(e.target.dataset.value)}>
 			{buttons}
-		</div>
+		</ul>
 	)
 }
 

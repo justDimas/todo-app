@@ -1,0 +1,34 @@
+.body__filter{
+	margin-top: 20px;
+}
+
+.filter{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.filter__button{
+	width: 100%;
+	text-wrap: nowrap;
+	outline: 0;
+	border: 0;
+	padding: 10px;
+	cursor: pointer;
+	background-color: lightgray;
+	position: relative;
+}
+
+.filter__button_selected{
+	animation: selected 500ms forwards;
+}
+
+@keyframes selected {
+	from{
+		background-color: lightgray;
+	}
+	to{
+		background-color: white;
+	}
+}
